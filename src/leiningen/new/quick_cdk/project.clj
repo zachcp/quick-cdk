@@ -59,13 +59,13 @@
                  [org.openscience.cdk/cdk-qm "1.5.5"]
                  [org.openscience.cdk/cdk-qsar "1.5.5"]
                  [org.openscience.cdk/cdk-qsaratomic "1.5.5"]
+                 [net.sourceforge.jmol/jmol "13.0.14"]
                  ]
 
   :main ^:skip-aot testmaven.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
-  :repositories [["ebi-repo" "http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo" ]
-                 ["cdk1" "http://ambit.uni-plovdiv.bg:8083/nexus/index.html"]
-                 ["cdk2" "https://maven.ch.cam.ac.uk/"]]  :source-paths ["src"]
+  :repositories [["ebi-repo" "http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo" ]]
+  :source-paths ["src"]
 )
 
