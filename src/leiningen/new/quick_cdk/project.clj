@@ -2,7 +2,7 @@
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
- :dependencies [[org.clojure/clojure "1.5.1"]
+   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.openscience.cdk/cdk-annotation "1.5.5"]
                  [org.openscience.cdk/cdk-atomtype "1.5.5"]
                  [org.openscience.cdk/cdk-builder3d "1.5.5"]
@@ -27,7 +27,7 @@
                  [org.openscience.cdk/cdk-io "1.5.5"]
                  [org.openscience.cdk/cdk-ioformats "1.5.5"]
                  [org.openscience.cdk/cdk-ionpot "1.5.5"]
-                 [org.openscience.cdk/cdk-iordf "1.5.5"]
+                 ;;[org.openscience.cdk/cdk-iordf "1.5.5"]
                  [org.openscience.cdk/cdk-isomorphism "1.5.5"]
                  [org.openscience.cdk/cdk-libiocml "1.5.5"]
                  [org.openscience.cdk/cdk-libiomd "1.5.5"]
@@ -63,8 +63,9 @@
 
   :main ^:skip-aot testmaven.core
   :target-path "target/%s"
-  :repositories [ ["ebi-repo" "http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo" ]]
-
-  :source-paths ["src"]
+  :profiles {:uberjar {:aot :all}}
+  :repositories [["ebi-repo" "http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo" ]
+                 ["cdk1" "http://ambit.uni-plovdiv.bg:8083/nexus/index.html"]
+                 ["cdk2" "https://maven.ch.cam.ac.uk/"]]  :source-paths ["src"]
 )
 
